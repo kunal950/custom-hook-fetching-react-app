@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useState, useEffect } from 'react'
 const useFetch = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -14,7 +14,7 @@ const useFetch = () => {
             setPhotos(data);
         }
         catch (error) {
-            setError(error);
+            setError(true);
         }
         finally {
             setLoading(false);
@@ -29,7 +29,7 @@ const useFetch = () => {
             setData(data);
         }
         catch (error) {
-            setError(error);
+            setError(true);
         }
         finally {
             setLoading(false);

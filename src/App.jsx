@@ -12,7 +12,6 @@ function App() {
         {error && !loading && <div><Error/></div>}
         {!error && loading && <div><Loading/></div>}
         {!error && !loading && <div><Cards photos={photos} data={data}/></div>}
-        {(loading && !error)?(<Loading />):(<Cards photos={photos} data={data}/>)}
       </div>
     </>
   );
